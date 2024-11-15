@@ -87,7 +87,7 @@ test_image_gen = image_gen.flow_from_directory(test_path,target_size=image_shape
 results = model.fit(train_image_gen,epochs=4,validation_data=test_image_gen)
 model.save('cell_model.h5')
 losses = pd.DataFrame(model.history.history)
-print("Mukil kumar v")
+print("Vinitha D")
 losses[['loss','val_loss']].plot()
 
 import random
@@ -102,7 +102,7 @@ pred=bool(model.predict(img.reshape(1,130,130,3))<0.5 )
 plt.title("Model prediction: "+("Parasitized" if pred
     else "Un Infected")+"\nActual Value: "+str(dir_))
 plt.axis("off")
-print("Mukil kumar v 212222230087")
+print("Vinitha D - 212222230175")
 plt.imshow(img)
 plt.show()
 
@@ -110,7 +110,7 @@ model.evaluate(test_image_gen)
 pred_probabilities = model.predict(test_image_gen)
 test_image_gen.classes
 predictions = pred_probabilities > 0.5
-print("Mukil kumar v 212222230087")
+print("Vinitha D - 212222230175")
 print(classification_report(test_image_gen.classes,predictions))
 confusion_matrix(test_image_gen.classes,predictions)
 ```
